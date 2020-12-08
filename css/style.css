@@ -1,0 +1,24 @@
+.tourse {
+    margin-left: 50px;
+    background: black;
+    margin-top: 50px;
+    padding: 20px;
+    width: 220px;
+}
+
+.ato {
+    color: #fff;
+}
+
+.mae {
+    color: rgb(166, 226, 46);
+}
+
+.possion_label {
+    list-style: none;
+}
+
+.possion_label li {
+    float: left;
+    margin-left: 50px;
+}

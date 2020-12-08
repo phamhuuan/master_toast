@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>style van ban</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="tourse">
+        <div>
+            <span class="ato"><</span>
+            <span class="mae">ToastContainer</span>
+
+        </div>
+        <div>
+            <span class="mae">position</span>
+            <span class="ato" id="abcd"> = "top-center"</span>
+        </div>
+
+        <div>
+            <span class="mae">autoClose</span>
+            <span class="ato"> = {false}</span>
+        </div>
+
+        <div>
+            <span class="mae">newestOnTop</span>
+            <span class="ato"> = {false}</span>
+        </div>
+
+        <div>
+            <span class="mae">closeOnclick</span>
+
+        </div>
+
+        <div>
+            <span class="mae">rtl</span>
+            <span class="ato"> = "false"</span>
+        </div>
+        <div>
+            <span class="ato">/></span>
+        </div>
+    </div>
+
+    <div>
+        <h3>Position</h3>
+        <ul class="possion_label">
+            <li>
+                <input type="radio" id="top-left" name="position" value="top-left" onclick="onChang(this.value)">
+                <label>top-left</label>
+            </li>
+
+            <li>
+                <input type="radio" id="top-right" name="position" value="top-right" onclick="onChang(this.value)">
+                <label>top-right</label>
+            </li>
+
+            <li>
+                <input type="radio" id="top-center" name="position" value="top-center" onclick="onChang(this.value)">
+                <label>top-center</label>
+            </li>
+
+            <li>
+                <input type="radio" id="bottom-left" name="position" value="bottom-left" onclick="onChang(this.value)">
+                <label>bottom-left</label>
+            </li>
+        </ul>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
