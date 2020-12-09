@@ -2,76 +2,82 @@
 <html>
 
 <head>
-    <title>style van ban</title>
-    <link rel="stylesheet" href="css/style.css">
+	<title>Master Toast</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/androidstudio.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
-<body>
-    <div class="tourse">
-        <div>
-            <span class="ato"><</span>
-            <span class="mae">ToastContainer</span>
+<body style="display: flex;flex-direction: column;">
+	<div class="tourse">
+		<pre><code class="html" id="HTMLCode">&lt;div class=<span style="color: #5f8f56;">&quot;<span style="color: #5f8f56;" id="position">top-center</span>&nbsp;<span style="color: #5f8f56;" id="type">success</span>&quot;</span>&gt;&lt;/div&gt;</code></pre>
+  </div>
 
-        </div>
-        <div>
-            <span class="mae">position</span>
-            <span class="ato" id="abcd"> = "top-center"</span>
-        </div>
-
-        <div>
-            <span class="mae">autoClose</span>
-            <span class="ato"> = {false}</span>
-        </div>
-
-        <div>
-            <span class="mae">newestOnTop</span>
-            <span class="ato"> = {false}</span>
-        </div>
-
-        <div>
-            <span class="mae">closeOnclick</span>
-
-        </div>
-
-        <div>
-            <span class="mae">rtl</span>
-            <span class="ato"> = "false"</span>
-        </div>
-        <div>
-            <span class="ato">/></span>
-        </div>
-    </div>
-
-    <div>
-        <h3>Position</h3>
-        <ul class="possion_label">
-            <li>
-                <input type="radio" id="top-left" name="position" value="top-left" onclick="onChang(this.value)">
-                <label>top-left</label>
-            </li>
-
-            <li>
-                <input type="radio" id="top-right" name="position" value="top-right" onclick="onChang(this.value)">
-                <label>top-right</label>
-            </li>
-
-            <li>
-                <input type="radio" id="top-center" name="position" value="top-center" checked onclick="onChang(this.value)">
-                <label>top-center</label>
-            </li>
-
-            <li>
-                <input type="radio" id="bottom-left" name="position" value="bottom-left" onclick="onChang(this.value)">
-                <label>bottom-left</label>
-            </li>
-        </ul>
-    </div>
-    <script src="js/index.js"></script>
+	<div style="margin-left: 40px;margin-right: 40px;">
+		<h3>Position</h3>
+		<ul class="possion_label">
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="top-left" name="position" value="top-left" onclick="setStyle(this)">
+				<label>top-left</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="top-right" name="position" value="top-right" checked onclick="setStyle(this)">
+				<label>top-right</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="top-center" name="position" value="top-center" onclick="setStyle(this)">
+				<label>top-center</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="bottom-left" name="position" value="bottom-left" onclick="setStyle(this)">
+				<label>bottom-left</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="bottom-right" name="position" value="bottom-right" onclick="setStyle(this)">
+				<label>bottom-right</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="bottom-center" name="position" value="bottom-center" onclick="setStyle(this)">
+				<label>bottom-center</label>
+			</li>
+		</ul>
+	</div>
+	<div style="margin-left: 40px;margin-right: 40px;">
+		<h3>Type</h3>
+		<ul class="possion_label">
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="info" name="type" value="info" onclick="setStyle(this)">
+				<label>info</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="success" name="type" value="success" checked onclick="setStyle(this)">
+				<label>success</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="warning" name="type" value="warning" onclick="setStyle(this)">
+				<label>warning</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="error" name="type" value="error" onclick="setStyle(this)">
+				<label>error</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="dark" name="type" value="dark" onclick="setStyle(this)">
+				<label>dark</label>
+			</li>
+			<li class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<input type="radio" id="default" name="type" value="default" onclick="setStyle(this.value)">
+				<label>default</label>
+			</li>
+		</ul>
+	</div>
+	<script src="js/index.js"></script>
 </body>
 
 </html>

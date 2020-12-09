@@ -1,3 +1,5 @@
-function onChang(position) {
-    document.getElementById("abcd").innerHTML = "= \"" + position + "\""
+const tab = '&nbsp;&nbsp;';
+
+function setStyle(obj) {
+	document.getElementById(obj.name).innerHTML = obj.value;
 }
